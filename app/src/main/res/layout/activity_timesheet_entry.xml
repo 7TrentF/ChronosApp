@@ -110,49 +110,89 @@
 
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:id="@+id/tvEnd"
+                android:layout_width="123dp"
+                android:layout_height="38dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="20dp"
                 android:text="End"
                 android:textColor="@color/white"
                 android:textSize="23sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btnEndTime"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/tvStart" />
+
+
+            <Button
+                android:id="@+id/btnEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Button"
+                app:layout_constraintEnd_toStartOf="@+id/btnEndDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvEnd"
+                app:layout_constraintTop_toBottomOf="@+id/btnStartTime" />
+
+            <Button
+                android:id="@+id/btnEndDate"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="125dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:onClick="openEndDatePicker"
+                android:text="End date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnEndTime"
+                app:layout_constraintTop_toBottomOf="@+id/btnStartDate" />
+
+            <Button
+                android:id="@+id/btnStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Button"
+                app:layout_constraintEnd_toStartOf="@+id/btnStartDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvStart"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:id="@+id/tvStart"
+                android:layout_width="125dp"
+                android:layout_height="37dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="4dp"
                 android:text="Start"
                 android:textColor="@color/white"
                 android:textSize="23sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/btnDate"
+                app:layout_constraintEnd_toStartOf="@+id/btnStartTime"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
 
             <Button
-                android:id="@+id/btnDate"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="40dp"
-                android:text="April 19 2024"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:onClick="openDatePicker"
+                android:id="@+id/btnStartDate"
                 style="?android:attr/spinnerStyle"
-                android:background="@color/black"
+                android:layout_width="128dp"
+                android:layout_height="51dp"
+                android:onClick="openStartDatePicker"
+                android:text="04/20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/btnStartTime"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="32dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -161,11 +201,12 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Button"
+        android:text="Create"
+        android:background="@drawable/button_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

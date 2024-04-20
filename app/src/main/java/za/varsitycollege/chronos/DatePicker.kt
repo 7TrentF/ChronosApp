@@ -3,16 +3,10 @@ package za.varsitycollege.chronos
 import android.app.DatePickerDialog
 import android.content.Context
 import android.widget.Button
-import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Locale
-
-
-
-class DatePicker(private val context: Context, private val dateButton: Button) {
+class DatePicker (private val context: Context, private val dateButton: Button) {
 
     private lateinit var datePickerDialog: DatePickerDialog
-    private var selectedDate: String = ""
 
     init {
         initDatePicker()
@@ -20,8 +14,8 @@ class DatePicker(private val context: Context, private val dateButton: Button) {
 
     private fun initDatePicker() {
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-            selectedDate = makeDateString(dayOfMonth, month + 1, year)
-            dateButton.text = selectedDate
+            val date = makeDateString(dayOfMonth, month + 1, year)
+            dateButton.text = date
         }
 
         val calendar = Calendar.getInstance()
@@ -37,12 +31,8 @@ class DatePicker(private val context: Context, private val dateButton: Button) {
         datePickerDialog.show()
     }
 
-    fun getDate(): String {
-        return selectedDate
-    }
-
     private fun makeDateString(day: Int, month: Int, year: Int): String {
-        return "${getMonthFormat(month)} $day, $year"
+        return "${getMonthFormat(month)} $day $year"
     }
 
     private fun getMonthFormat(month: Int): String {
