@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:cardBackgroundColor="#1E1E1E"
-        app:cardCornerRadius="5dp"
+        app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,41 +22,40 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/tvProjectName"
             app:layout_constraintStart_toEndOf="@+id/tvProjectName">
 
             <EditText
                 android:id="@+id/etProjectName"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:autofillHints="Category"
-                android:hint="@string/project_name"
+                android:hint="@string/project"
+                android:inputType="text"
                 android:textColor="@color/white"
                 android:textSize="23sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/tvProjectName"
+                app:layout_constraintEnd_toEndOf="@+id/etCategory"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvProjectName"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Project Name:"
+                android:layout_marginTop="4dp"
+                android:text="@string/Project_name"
                 android:textColor="#FDB813"
                 android:textSize="23sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/etProjectName"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvCategory"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvCategory"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="@string/category"
@@ -70,51 +69,51 @@
 
             <EditText
                 android:id="@+id/etCategory"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:autofillHints="Category"
                 android:ems="10"
+                android:hint="@string/category"
                 android:inputType="text"
-                android:text="@string/name"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/tvCategory"
                 app:layout_constraintTop_toBottomOf="@+id/etProjectName" />
 
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="408dp"
-        android:layout_height="517dp"
+        android:layout_width="375dp"
+        android:layout_height="543dp"
         android:overScrollMode="never"
         android:paddingTop="15dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588">
+        app:layout_constraintVertical_bias="0.638">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
 
             <TextView
                 android:id="@+id/tvEnd"
-                android:layout_width="123dp"
+                android:layout_width="wrap_content"
                 android:layout_height="38dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="20dp"
-                android:text="End"
-                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:text="@string/end"
+                android:textColor="@color/yellow"
                 android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/btnEndTime"
@@ -122,13 +121,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvStart" />
 
-
             <Button
                 android:id="@+id/btnEndTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Button"
+                android:backgroundTint="@color/black"
+                android:onClick="openEndTimePicker"
+                android:text="@string/_00_01"
                 app:layout_constraintEnd_toStartOf="@+id/btnEndDate"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/tvEnd"
@@ -137,11 +137,11 @@
             <Button
                 android:id="@+id/btnEndDate"
                 style="?android:attr/spinnerStyle"
-                android:layout_width="125dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:onClick="openEndDatePicker"
-                android:text="End date"
+                android:text="@string/_04_21"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btnEndTime"
@@ -152,34 +152,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Button"
-                app:layout_constraintEnd_toStartOf="@+id/btnStartDate"
-                app:layout_constraintHorizontal_bias="0.5"
+                android:backgroundTint="@color/black"
+                android:onClick="openStartTimePicker"
+                android:text="@string/_00_00"
                 app:layout_constraintStart_toEndOf="@+id/tvStart"
+                app:layout_constraintStart_toStartOf="@+id/btnEndTime"
                 app:layout_constraintTop_toTopOf="@+id/guideline" />
+
 
             <TextView
                 android:id="@+id/tvStart"
-                android:layout_width="125dp"
-                android:layout_height="37dp"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="4dp"
-                android:text="Start"
-                android:textColor="@color/white"
+                android:text="@string/start"
+                android:textColor="@color/yellow"
                 android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/btnStartTime"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline" />
 
             <Button
                 android:id="@+id/btnStartDate"
                 style="?android:attr/spinnerStyle"
-                android:layout_width="128dp"
-                android:layout_height="51dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:onClick="openStartDatePicker"
-                android:text="04/20"
+                android:text="@string/_04_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btnStartTime"
@@ -190,17 +193,132 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="32dp" />
+                app:layout_constraintGuide_begin="16dp" />
+
+
+            <View
+                android:id="@+id/viewTwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="288dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnStartTime" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingTop="15dp"
+                android:text="@string/description"
+                android:textColor="@color/yellow"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/etDescription"
+                app:layout_constraintTop_toBottomOf="@+id/viewTwo" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:background="@drawable/white_button_border"
+                android:hint="@string/enter_description_here"
+                android:inputType="text"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.271"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvDailyGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="52dp"
+                android:text="@string/set_daily_goal"
+                android:textColor="@color/yellow"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+            <EditText
+                android:id="@+id/etMin"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="44dp"
+                android:autofillHints=""
+                android:background="@drawable/white_button_border"
+                android:hint="@string/minimum_hours"
+                android:inputType="number"
+                android:textColor="@color/white"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etMax"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etMax"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
+                android:autofillHints=""
+                android:background="@drawable/white_button_border"
+                android:hint="@string/Maximum_Hours"
+                android:inputType="number"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.585"
+                app:layout_constraintStart_toEndOf="@+id/etMin"
+                app:layout_constraintTop_toBottomOf="@+id/tvDailyGoal" />
+
+            <Button
+                android:id="@+id/btnPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="128dp"
+                android:backgroundTint="@color/black"
+                android:text="@string/add_image"
+                android:textColor="@color/yellow"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/viewTwo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/ivStart"
                 android:layout_width="48dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/tvStart"
                 app:layout_constraintTop_toTopOf="@+id/guideline"
-                app:srcCompat="@drawable/playic" />
+                app:srcCompat="@drawable/start_icon" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="48dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvEnd"
+                app:layout_constraintTop_toBottomOf="@+id/ivStart"
+                app:srcCompat="@drawable/end_icon" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="137dp"
+                android:layout_height="121dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPhoto"
+                app:srcCompat="@drawable/ic_launcher_background" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -212,10 +330,13 @@
         android:id="@+id/btnCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Create"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/button_border"
+        android:text="@string/create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

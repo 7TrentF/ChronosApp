@@ -3,11 +3,17 @@ package za.varsitycollege.chronos
 import android.app.DatePickerDialog
 import android.content.Context
 import android.widget.Button
+import android.widget.Toast
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.Calendar
+import java.util.Locale
+
 class DatePicker (private val context: Context, private val dateButton: Button) {
 
     private lateinit var datePickerDialog: DatePickerDialog
-
+    private var selectedDate: String = ""
     init {
         initDatePicker()
     }
@@ -35,6 +41,26 @@ class DatePicker (private val context: Context, private val dateButton: Button) 
         return "${getMonthFormat(month)} $day $year"
     }
 
+    fun getDate(): String {
+        return selectedDate
+    }
+
+    fun validateStartEndDates(startDate: Calendar, endDate: Calendar) {
+        if (startDate.timeInMillis >= endDate.timeInMillis) {
+            Toast.makeText(context, "Start date must be before end date", Toast.LENGTH_LONG).show()
+        }
+    }
+
+
+    fun getDateAsCalendar(): Calendar {
+        val format = SimpleDateFormat("MMM dd yyyy", Locale.getDefault())
+        val dateParsed = format.parse(selectedDate)
+        val calendar = Calendar.getInstance()
+        calendar.time = dateParsed
+        return calendar
+    }
+
+
     private fun getMonthFormat(month: Int): String {
         return when (month) {
             1 -> "JAN"
@@ -52,4 +78,6 @@ class DatePicker (private val context: Context, private val dateButton: Button) 
             else -> "UNKNOWN"
         }
     }
+
+
 }

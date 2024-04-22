@@ -4,5 +4,12 @@
         <item name="colorAccent">@android:color/white</item>
     </style>
 
+    <style name="MyDatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/yellow</item>
+    </style>
+
 
 </resources>
