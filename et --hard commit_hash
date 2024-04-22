@@ -1,0 +1,35 @@
+[33mcommit 52540b5f7b0dad576146f5bec92eb989ae749433[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Trent Fisher <Trentfisher017@gmail.com>
+Date:   Sun Apr 21 14:01:47 2024 +0200
+
+    All elements added
+
+[33mcommit 6f2097f232cc1e3a69c7209f180450a477d756f0[m
+Author: Trent Fisher <Trentfisher017@gmail.com>
+Date:   Sat Apr 20 14:16:22 2024 +0200
+
+    datepicker and timepicker working for start and end
+
+[33mcommit c9e0fe419cb2bd2636571cd3908e1ba558693851[m
+Author: Trent Fisher <Trentfisher017@gmail.com>
+Date:   Sat Apr 20 12:16:36 2024 +0200
+
+    Start and end Date issue solved
+
+[33mcommit a46202e5b1b2703732430d600d44ca04b42c9985[m
+Author: Trent Fisher <Trentfisher017@gmail.com>
+Date:   Fri Apr 19 23:10:55 2024 +0200
+
+    button_border
+
+[33mcommit 7a42ca774d317ea360dceb853e775ba459c28a12[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Mcebo Mthembu <ST10091187@vcconnect.edu.za>
+Date:   Mon Apr 22 10:35:46 2024 +0200
+
+    ChronosApp commit
+
+[33mcommit da7fb7b06e0759e68c2707e10c7aad3e4cf7a9b5[m
+Author: Mcebo Mthembu <ST10091187@vcconnect.edu.za>
+Date:   Mon Apr 22 10:24:02 2024 +0200
+
+    ChronosApp
