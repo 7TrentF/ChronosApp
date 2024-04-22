@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <!-- TextView for Unique ID -->
+        <TextView
+            android:id="@+id/uniqueIdTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unique ID" />
+
+        <!-- TextView for Project Name -->
+        <TextView
+            android:id="@+id/projectNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Project Name" />
+
+        <!-- TextView for Category -->
+        <TextView
+            android:id="@+id/CategoryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category" />
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Chronos</string>
+    <string name="project_name">Project Name</string>
+    <string name="category">Category:</string>
+    <string name="name">Name</string>
+    <string name="Project_name">Project Name:</string>
+    <string name="project">Project</string>
+    <string name="end">End</string>
+    <string name="description">Description</string>
+    <string name="_04_20">04/20</string>
+    <string name="_04_21">04/20</string>
+    <string name="_00_00">00:00</string>
+    <string name="start">Start</string>
+    <string name="enter_description_here">Enter Description here</string>
+    <string name="set_daily_goal">Set daily goal</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="add_image">add Image?</string>
+    <string name="create">Create</string>
+    <string name="_00_01">00:00</string>
+    <string name="Minimum_Hours">minimum hours</string>
+    <string name="Maximum_Hours">Maximum Hours</string>
+    <string name="minimum_hours">Minimum Hours</string>
+</resources>
