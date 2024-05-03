@@ -26,4 +26,9 @@
     <string name="navigation_drawer_open" />
     <string name="navigation_drawer_close" />
     <string name="chronos_timetracker">Chronos TimeTracker</string>
+    <string name="Register">Register</string>
+    <string name="Username">Username</string>
+    <string name="App_name">Chronos Timesheets</string>
+    <string name="Login">Login</string>
+    <string name="Password">Password</string>
 </resources>

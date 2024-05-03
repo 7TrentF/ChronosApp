@@ -2,7 +2,19 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_item_1"
-        android:title="Item 1"
-        android:icon="@drawable/ic_menu_item_1" />
+        android:id="@+id/report"
+        android:title="Report"
+
+        android:icon="@drawable/report_icon" />
+
+    <item
+        android:id="@+id/login"
+        android:icon="@drawable/login_icon"
+        android:title="@string/Login" />
+
+    <item
+        android:id="@+id/Timesheet"
+        android:title="Timesheet Entry"
+        android:icon="@drawable/timesheet"/>
+
 </menu>

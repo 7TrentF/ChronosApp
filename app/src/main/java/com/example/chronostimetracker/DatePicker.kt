@@ -13,7 +13,8 @@ import java.util.Locale
 class DatePicker (private val context: Context, private val dateButton: Button) {
 
     private lateinit var datePickerDialog: DatePickerDialog
-    private var selectedDate: String = ""
+    var selectedDate: String = ""
+        private set
     init {
         initDatePicker()
     }
@@ -22,6 +23,7 @@ class DatePicker (private val context: Context, private val dateButton: Button) 
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
             val date = makeDateString(dayOfMonth, month + 1, year)
             dateButton.text = date
+            selectedDate = date
         }
 
         val calendar = Calendar.getInstance()
@@ -42,12 +44,6 @@ class DatePicker (private val context: Context, private val dateButton: Button) 
     }
 
     fun getDate(): String {
-        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-            val date = makeDateString(dayOfMonth, month + 1, year)
-            dateButton.text = date
-            selectedDate = date // Ensure this line is present
-        }
-
         return selectedDate
     }
 

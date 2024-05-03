@@ -5,5 +5,9 @@
     <color name="yellow">#FDB813</color>
     <color name="red">#FF0000</color>
     <color name="blue">#00C2FF</color>
+    <color name="grey">#303030</color>
+    <color name="purple_200">#CC00FF</color>
+    <color name="lightyellow">#FFEB3B</color>
+    <color name="lightred">#F44336</color>
 
 </resources>

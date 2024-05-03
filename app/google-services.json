@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1081645727036",
+    "project_id": "chronosfb",
+    "storage_bucket": "chronosfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081645727036:android:8f52be264d57f70f593239",
+        "android_client_info": {
+          "package_name": "com.example.chronostimetracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcTUK9cZQHi5CTI7EbjXj4ieNqhMs5HUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081645727036:android:0c1d706613a94b0d593239",
+        "android_client_info": {
+          "package_name": "za.varsitycollege.chronos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcTUK9cZQHi5CTI7EbjXj4ieNqhMs5HUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

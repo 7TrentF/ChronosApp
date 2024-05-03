@@ -10,5 +10,8 @@ data class TimesheetData(
     val endTime: String,
     val endDate: String,
     val minHours: Int,
-    val maxHours: Int
+    val maxHours: Int,
+    val imageData: String?,
+    var elapsedTime: Long = 0,
+    var creationTime: Long = 0 // Add this line
 )
